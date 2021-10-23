@@ -7,16 +7,17 @@ const forecast = require("./utlis/forecast");
 
 const port = process.env.PORT || 3000;
 
+// Create app
+const app = express();
+
+// Define paths for Express Config
+
 // console.log(__dirname);
 // console.log(path.join(__dirname, "../public"));
 
-// Define paths for Express Config
 const publicDirectoryPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
-
-// Create app
-const app = express();
 
 // Setup handlebar engine and Views location
 app.set("view engine", "hbs");
